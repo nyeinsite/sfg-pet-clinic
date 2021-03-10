@@ -7,13 +7,15 @@ import com.example.sfgpetclinic.model.Vet;
 import com.example.sfgpetclinic.service.OwnerService;
 import com.example.sfgpetclinic.service.VetService;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 
+@Component
 public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
-    public DataLoader() {
-     ownerService=new OwnerServiceMap();
-     vetService=new VetServiceMap();
+    public DataLoader(OwnerService ownerService,VetService vetService) {
+     this.ownerService=new OwnerServiceMap();
+     this.vetService=new VetServiceMap();
     }
 
     @Override
