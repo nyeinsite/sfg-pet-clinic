@@ -3,10 +3,11 @@ package com.example.sfgpetclinic.map;
 import com.example.sfgpetclinic.model.Owner;
 
 import com.example.sfgpetclinic.service.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner,Long> implements OwnerService {
 
 
