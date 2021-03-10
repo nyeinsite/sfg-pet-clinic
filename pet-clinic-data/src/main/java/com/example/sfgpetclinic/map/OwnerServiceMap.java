@@ -1,11 +1,14 @@
 package com.example.sfgpetclinic.map;
 
 import com.example.sfgpetclinic.model.Owner;
-import com.example.sfgpetclinic.service.CrudService;
+
+import com.example.sfgpetclinic.service.OwnerService;
 
 import java.util.Set;
 
-public class OwnerServiceMap extends AbstractMapService<Owner,Long>implements CrudService<Owner,Long> {
+
+public class OwnerServiceMap extends AbstractMapService<Owner,Long> implements OwnerService {
+
 
     @Override
     public Set<Owner> findAll() {
@@ -13,13 +16,8 @@ public class OwnerServiceMap extends AbstractMapService<Owner,Long>implements Cr
     }
 
     @Override
-    public void deleteById(Long id) {
-super.deleteById(id);
-    }
-
-    @Override
-    public void delete(Owner object) {
-        super.delete(object);
+    public Owner findById( Long id) {
+        return super.findById(id);
     }
 
     @Override
@@ -27,8 +25,14 @@ super.deleteById(id);
         return super.save(object.getId(),object);
     }
 
+
     @Override
-    public Owner findById(Long id) {
-        return super.findById(id);
+    public void delete(Owner object) {
+    super.delete(object);
+    }
+
+    @Override
+    public void deleteById(Long id) {
+super.deleteById(id);
     }
 }

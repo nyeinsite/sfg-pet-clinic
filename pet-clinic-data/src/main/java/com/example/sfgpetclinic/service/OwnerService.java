@@ -4,7 +4,6 @@ import com.example.sfgpetclinic.model.Owner;
 
 
 
-public interface OwnerService extends CrudService{
-    Owner findByLastName(String lastName);
+public interface OwnerService  extends CrudService<Owner,Long>{
 
 }
