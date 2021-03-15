@@ -1,17 +1,18 @@
 package com.example.sfgpetclinic.model;
 
-import sun.util.resources.LocaleData;
+
+import java.time.LocalDate;
 
 public class Visit extends BaseEntity{
-    private LocaleData date;
+    private LocalDate date;
     private String description;
     private Pet pet;
 
-    public LocaleData getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(LocaleData date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 
