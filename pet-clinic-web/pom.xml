@@ -18,6 +18,7 @@
       </repository>
   </repositories>
 <dependencies>
+
     <dependency>
         <artifactId>pet-clinic-data</artifactId>
         <groupId>com.example</groupId>

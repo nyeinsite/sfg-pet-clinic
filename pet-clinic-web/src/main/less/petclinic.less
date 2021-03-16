@@ -24,9 +24,9 @@
 @link-color:                        @spring-dark-green;
 @link-hover-color:                  @spring-dark-green;
 
-@navbar-default-link-color:         @spring-light-grey;
-@navbar-default-link-active-color:  @spring-light-grey;
-@navbar-default-link-hover-color:   @spring-light-grey;
+@navbar-default-link-color:         @spring-dark-green;
+@navbar-default-link-active-color:  @spring-dark-green;
+@navbar-default-link-hover-color:   @spring-dark-green;
 @navbar-default-link-hover-bg:      @spring-green;
 @navbar-default-toggle-icon-bar-bg: @spring-light-grey;
 @navbar-default-toggle-hover-bg:    transparent;
@@ -40,12 +40,12 @@
 @btn-default-bg:                 @spring-brown;
 @btn-default-border:             @spring-green;
 
-@nav-tabs-active-link-hover-color:        @spring-light-grey;
-@nav-tabs-active-link-hover-bg:           @spring-brown;
+@nav-tabs-active-link-hover-color:        @spring-dark-green;
+@nav-tabs-active-link-hover-bg:           @spring-dark-green;
 @nav-tabs-active-link-hover-border-color: @spring-brown;
 @nav-tabs-border-color:                   @spring-brown;
 
-@pagination-active-bg:                    @spring-brown;
+@pagination-active-bg:                    @spring-dark-green;
 @pagination-active-border:                @spring-green;
 @table-border-color:                      @spring-brown;
 
@@ -60,7 +60,7 @@
 }
 
 .nav > li > a {
-  color: @spring-grey;
+  color: @spring-dark-green;
 }
 
 .btn-default {
@@ -76,7 +76,7 @@
   &:active,
   &.active,
   .open .dropdown-toggle& {
-    background-color: @spring-brown;
+    background-color: @spring-dark-green;
     border-color: @spring-brown;
   }
 }
@@ -177,21 +177,7 @@ table td.action-column {
   margin-bottom: 0;
 }
 
-.deployment-status-deployed {
-  .label-success;
-}
 
-.deployment-status-incomplete {
-  .label-warning;
-}
-
-.deployment-status-failed {
-  .label-danger;
-}
-
-.deployment-status-deploying {
-  .label-info
-}
 .deployment-status-na {
 }
 
@@ -204,31 +190,6 @@ table td.action-column {
   color: @spring-brown;
 }
 
-.alert-success {
-  .alert-variant(fade(@alert-success-bg, 70%); @alert-success-border; @alert-success-text);
-}
-.alert-info {
-  .alert-variant(fade(@alert-info-bg, 70%); @alert-info-border; @alert-info-text);
-}
-.alert-warning {
-  .alert-variant(fade(@alert-warning-bg, 70%); @alert-warning-border; @alert-warning-text);
-}
-.alert-danger {
-  .alert-variant(fade(@alert-danger-bg, 70%); @alert-danger-border; @alert-danger-text);
-}
-
-.myspinner {
-  animation-name: spinner;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-
-  -webkit-transform-origin: 49% 50%;
-  -webkit-animation-name: spinner;
-  -webkit-animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-}
 
 hr {
   border-top: 1px dotted @spring-brown;
