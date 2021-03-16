@@ -1,6 +1,6 @@
 package com.example.sfgpetclinic.controllers;
 
-import com.example.sfgpetclinic.service.VetService;
+import com.example.sfgpetclinic.services.VetService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

@@ -1,4 +1,4 @@
-package com.example.sfgpetclinic.service;
+package com.example.sfgpetclinic.services;
 
 import com.example.sfgpetclinic.model.PetType;
 

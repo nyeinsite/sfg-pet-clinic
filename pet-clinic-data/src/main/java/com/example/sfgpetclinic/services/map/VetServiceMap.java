@@ -1,9 +1,8 @@
-package com.example.sfgpetclinic.map;
+package com.example.sfgpetclinic.services.map;
 
-import com.example.sfgpetclinic.model.Owner;
 import com.example.sfgpetclinic.model.Vet;
 
-import com.example.sfgpetclinic.service.VetService;
+import com.example.sfgpetclinic.services.VetService;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;

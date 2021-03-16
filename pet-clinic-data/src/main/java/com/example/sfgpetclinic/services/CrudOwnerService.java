@@ -1,6 +1,4 @@
-package com.example.sfgpetclinic.service;
-
-import com.example.sfgpetclinic.model.Owner;
+package com.example.sfgpetclinic.services;
 
 import java.util.Set;
 
