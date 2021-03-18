@@ -2,6 +2,8 @@ package com.example.sfgpetclinic.model;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name="pets")
@@ -16,6 +18,9 @@ public class Pet extends BaseEntity{
     private Owner owner;
     @Column(name = "birth_date")
     private LocalDate birthDate;
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "pet")
+    private List<Visit> visits=new ArrayList<>();
+
 
     public String getName() {
         return name;
@@ -48,4 +53,12 @@ public class Pet extends BaseEntity{
     public void setBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
     }
+    public List<Visit> getVisits() {
+        return visits;
+    }
+
+    public void setVisits(List<Visit> visits) {
+        this.visits = visits;
+    }
+
 }
