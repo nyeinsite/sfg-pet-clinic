@@ -2,10 +2,7 @@ package com.example.sfgpetclinic.bootstrap;
 
 
 import com.example.sfgpetclinic.model.*;
-import com.example.sfgpetclinic.services.OwnerService;
-import com.example.sfgpetclinic.services.PetTypeService;
-import com.example.sfgpetclinic.services.SpecialityService;
-import com.example.sfgpetclinic.services.VetService;
+import com.example.sfgpetclinic.services.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -18,12 +15,14 @@ public class DataLoader implements CommandLineRunner {
     private final VetService vetService;
     private final PetTypeService petTypeService;
     private final SpecialityService specialityService;
+    private final VisitService visitService;
 @Autowired
-    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialityService specialityService) {
+    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialityService specialityService, VisitService visitService) {
      this.ownerService=ownerService;
      this.vetService=vetService;
      this.petTypeService = petTypeService;
     this.specialityService = specialityService;
+    this.visitService = visitService;
 }
 
     @Override
@@ -82,6 +81,11 @@ public class DataLoader implements CommandLineRunner {
         nyiCat.setPetType(savedCatType);
         owner2.getPets().add(nyiCat);
         ownerService.save(owner2);
+
+        Visit catVisit=new Visit();
+        catVisit.setPet(nyiCat);
+        catVisit.setDate(LocalDate.now());
+        catVisit.setDescription("Sneezy Kitty");
         System.out.println("Load Owners...");
         Vet vet1=new Vet();
         // vet1.setId(1L);
