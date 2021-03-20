@@ -37,6 +37,13 @@ public class OwnerSDJpaService implements OwnerService {
 
     @Override
     public Owner save(Owner object) {
+
+        System.out.println("ACTIVE PROFILE");
+        System.out.println("ACTIVE PROFILE");
+        System.out.println("ACTIVE PROFILE");
+        System.out.println("ACTIVE PROFILE");
+        System.out.println("ACTIVE PROFILE");
+
         return ownerRepository.save(object);
     }
 

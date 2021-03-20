@@ -59,7 +59,7 @@ public class DataLoader implements CommandLineRunner {
         owner1.setLastName("Yadanar Tun");
         owner1.setAddress("Yangon");
         owner1.setCity("Yangon");
-
+Owner.builder().address("fwe").toString();
         Pet nyeinPet=new Pet();
         nyeinPet.setPetType(savedDogType);
         nyeinPet.setOwner(owner1);

@@ -1,12 +1,15 @@
 package com.example.sfgpetclinic.model;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
+import lombok.*;
+
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
+@Setter
+@Getter
+@NoArgsConstructor
 @Entity
+@Table(name = "owners")
 public class Owner extends Person{
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "owner")
     private Set<Pet> pets=new HashSet<>();
@@ -16,36 +19,13 @@ public class Owner extends Person{
     private String city;
     @Column(name="telephone")
     private String telephone;
+@Builder
 
-    public Set<Pet> getPets() {
-        return pets;
-    }
-
-    public void setPets(Set<Pet> pets) {
+    public Owner(Long id, String firstName, String lastName, Set<Pet> pets, String address, String city, String telephone) {
+        super(id, firstName, lastName);
         this.pets = pets;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
         this.address = address;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
         this.city = city;
-    }
-
-    public String getTelephone() {
-        return telephone;
-    }
-
-    public void setTelephone(String telephone) {
         this.telephone = telephone;
     }
 }

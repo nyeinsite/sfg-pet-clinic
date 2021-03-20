@@ -1,11 +1,13 @@
 package com.example.sfgpetclinic.services.map;
 
 import com.example.sfgpetclinic.model.BaseEntity;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
 
 @Service
+@Profile({"default","map"})
 public abstract class AbstractMapService<T extends BaseEntity,ID extends Long> {
     protected Map<Long,T>map=new HashMap<>();
     Set<T> findAll(){
